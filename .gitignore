@@ -1,0 +1,14 @@
+# .gitignore para un proyecto Django
+
+# Entorno virtual
+venv-for-teepeechat/
+
+# Archivos de compilación de Python
+__pycache__/
+*.pyc
+
+# Archivos de bases de datos de Django
+*.sqlite3
+
+# Archivos de configuración locales de VSCode
+.vscode/
