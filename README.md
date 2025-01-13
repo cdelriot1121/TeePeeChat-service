@@ -64,7 +64,13 @@ pip install -r requirements.txt
 
 ### 4. Configuración del proyecto
 
-Asegúrate de que todos los archivos necesarios para la base de datos y otros componentes estén configurados adecuadamente. Si es la primera vez que inicias el proyecto, realiza las migraciones para configurar la base de datos:
+Asegúrate tambien de que todos los archivos necesarios para la base de datos y otros componentes estén configurados adecuadamente. Si es la primera vez que inicias el proyecto, realiza las migraciones para configurar la base de datos:
+
+(este puede ser opcional XD)
+```bash
+python manage.py makemigrations 
+```
+**Ejecute el comando migrate**
 
 ```bash
 python manage.py migrate
@@ -72,7 +78,7 @@ python manage.py migrate
 
 ### 5. Ejecutar el servidor de desarrollo
 
-Una vez todo esté configurado, puedes ejecutar el servidor de desarrollo de Django:
+Una vez todo este ya configurado, puedes ejecutar el servidor de desarrollo de Django:
 
 ```bash
 python manage.py runserver
@@ -82,11 +88,11 @@ Esto iniciará el servidor localmente en `http://127.0.0.1:8000/`.
 
 ### 6. Contribuir
 
-Si deseas contribuir al proyecto, asegúrate de seguir estos pasos antes de enviar un Pull Request:
+Si deseas contribuir al proyecto, asegúrate de seguir estos pasos antes de enviar un PR:
 
-- Realiza los cambios en una nueva rama.
-- Asegúrate de que el código sea compatible con el formato PEP8.
-- Ejecuta las pruebas para asegurar que el código no rompa nada.
+- Realiza los cambios en una nueva rama, de tu fork
+- Asegúrate de que el código sea compatible con el formato PEP8 (importante).
+- Ejecuta las pruebas para asegurar que el código no rompa nada (Puedes buscar en la documentación de django para hacer test a unidades y modelos).
 
 Para ejecutar las pruebas de Django:
 
@@ -99,11 +105,3 @@ python manage.py test
 Este repositorio contiene el backend de la aplicación de mensajería. Si deseas ver el frontend desarrollado en React, puedes encontrar el repositorio correspondiente aquí:
 
 [TeePeeChat Frontend (React)](https://github.com/cdelriot1121/TeePeeChat-Template)
-
-## 📄 **Licencia**
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
-```
-
-Este README cubre la instalación y configuración del backend, así como cómo contribuir y el enlace al repositorio del frontend. ¡Espero que te sirva!
