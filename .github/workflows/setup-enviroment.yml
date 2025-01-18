@@ -1,0 +1,45 @@
+name: Setup and Test Environment
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m venv env
+        .\env\Scripts\activate
+        pip install -r requirements.txt
+
+    - name: Run migrations (optional)
+      run: |
+        .\env\Scripts\activate
+        python manage.py makemigrations
+        python manage.py migrate
+
+    - name: Run tests
+      run: |
+        .\env\Scripts\activate
+        python manage.py test
+
+    - name: Check code formatting
+      run: |
+        .\env\Scripts\activate
+        pip install flake8
+        flake8 .
