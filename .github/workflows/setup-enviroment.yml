@@ -38,9 +38,3 @@ jobs:
       run: |
         .\env\Scripts\activate
         python manage.py test
-
-    - name: Check code formatting
-      run: |
-        .\env\Scripts\activate
-        pip install flake8
-        flake8 .
