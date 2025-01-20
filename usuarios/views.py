@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from .models import Usuario
 
-@csrf_exempt  # Esto es solo para pruebas locales. En producción, usa CSRF correctamente.
+@csrf_exempt
 def login_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)
